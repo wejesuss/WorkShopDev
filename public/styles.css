@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,600,700,800,900&display=swap');
+
+body {
+    background-color: #efefef;
+    color: #25282B;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.hideScroll {
+    overflow: hidden;
+}
+
+a {
+    color: #ff5e84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+footer.hide {
+    display: none;
+}
+
+p, .description {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+#container {
+    width: 80%;
+    max-width: 980px;
+    margin: 40px auto;
+    display: flex;
+}
+
+#intro {
+    width: 300px;
+    margin-right: 80px;
+}
+
+main {
+    margin: 32px 0;
+}
+
+#buttons {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    background: none;
+    color: #ff5e84;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+a.button {
+    background-color: #ff5e84;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    width: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px #ff5e8432;
+    transition: all 200ms;
+}
+
+a.button:hover {
+    text-decoration: none;
+    background-color: #0984e3;
+
+}
+
+footer {
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #777;
+}
+
+footer a {
+    opacity: 0.7;
+}
+
+.idea {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 16px -8px hsla(0, 0%, 0%, 0.1);
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+.idea img {
+    height: 60px;
+    width: 60px;
+    margin-right: 32px;
+    align-self: center;
+}
+
+.idea h3 {
+    margin: 0;
+}
+
+.idea .content p {
+    color: #777;
+    margin: 8px 0;
+}
+
+.idea .content .description {
+    margin: 16px 0;
+}
+
+/* modal */
+
+#modal {
+    background: #ff5e84;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    display: flex;
+    justify-content: center;
+}
+
+#modal .content {
+    margin-top: 6%;
+    color: white;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 15%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#modal.addScroll {
+    overflow: auto;
+}
+
+.content form div:nth-child(3), 
+.content form div:nth-child(4), 
+.content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+#modal form input,
+#modal form textarea {
+    box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(142, 46, 78, 0.5);
+    outline: none;
+    resize: none;
+}
+
+#modal form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+#modal form a {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff22;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+
+    align-self: end;
+    transition: all 400ms;
+}
+
+#modal form a:hover {
+    background-color: #fff;
+    color: #ff5e84;
+    text-decoration: none;
+}
+
+#modal form button {
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    margin-top: 32px;
+    grid-column: 2;
+    justify-self: end;
+    transition: all 400ms;
+}
+
+#modal form button:hover {
+    background-color: #0984e3;
+    color: white;
+    text-decoration: none;
+}
+
+#modal.hide {
+   opacity: 0;
+   visibility: hidden;
+}
+
+/* IDEAS */
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas header nav {
+    display: flex;
+    align-items: center;
+}
+
+#page-ideas header nav li {
+    list-style-type: none;
+    margin-right: 16px;
+}
+
+#page-ideas header nav li a {
+    color: #25282b;
+}
+
+#page-ideas header nav li a.button {
+    color: #fff;
+}
+
+#page-ideas header nav li:last-child {
+    margin-right: 0;
+}
+
+section#title {
+    text-align: center;
+}
+
+section#title p {
+    opacity: 0.7;
+    margin: 0;
+}
+
+section#title h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+section#ideas .idea {
+    margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+    margin-top: 64px;
+}
+
+/* DELETE idea */
+.idea div.delete-idea {
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+.idea div.delete-idea button {
+    width: 25px;
+    position: absolute;
+    height: 25px;
+    padding: 0;
+    top: -10px;
+    right: 5px;
+}
+
+.idea div.delete-idea button img {
+    width: 25px;
+    margin: 0;
+    height: 25px;
+}

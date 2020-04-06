@@ -1,0 +1,19 @@
+{% for idea in ideas %}
+    <div class="idea">
+        <img src="{{idea.image}}" alt="Imagem de curso de {{idea.title}}">
+        <div class="content">
+            <h3>{{idea.title}}</h3>
+            <p>{{idea.category}}</p>
+            <div class="description">{{idea.description}}</div>
+            <a href="{{idea.link}}" target="_blank">Ir para a ideia</a>
+        </div>
+        <div class="delete-idea">
+            <form action="/ideas?_method=DELETE" method="post" onsubmit="return confirmDelete(event)">
+                <input type="hidden" name="id" value={{idea.id}}>
+                <button type="submit">
+                    <img src="https://image.flaticon.com/icons/svg/998/998508.svg" alt="lixeira">
+                </button>
+            </form>
+        </div>
+    </div>
+{% endfor %}
